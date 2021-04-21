@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest]
-        swift: ["5.1.0", "4.2.0"]
+        swift: ["5.2", "4.2.4"]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: fwal/setup-swift@v1
