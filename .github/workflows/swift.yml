@@ -7,8 +7,8 @@ jobs:
     name: Swift ${{ matrix.swift }} on ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest]
-        swift: ["5.2", "5.3"] # test on one ubuntu
+        os: [ubuntu-latest, macos-latest]
+        swift: ["5.2", "5.3"]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: fwal/setup-swift@v1
@@ -16,4 +16,4 @@ jobs:
           swift-version: ${{ matrix.swift }}
       - uses: actions/checkout@v2
       - name: Build
-        run: swift --version
+        run: swift --version 
