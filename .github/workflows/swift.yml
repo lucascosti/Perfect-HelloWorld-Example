@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        swift: ["5.1.0", "4.2.1"] # test on two macos
+        swift: ["5.1.0"] # test on one ubuntu
     runs-on: ${{ matrix.os }}
     steps:
       - uses: fwal/setup-swift@v1
